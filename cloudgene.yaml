@@ -1,0 +1,26 @@
+id: fetchngs
+name: Fetch NGS Data
+description: Pipeline to fetch metadata and raw FastQ files from public databases
+version: 1.12.0
+website: https://github.com/nf-core/fetchngs
+author: Harshil Patel, Moritz E. Beber and Jose Espinosa-Carrasco
+logo: https://raw.githubusercontent.com/nf-core/fetchngs/master/docs/images/nf-core-fetchngs_logo_light.png
+
+workflow:
+  steps:
+    - name: Fetch Data
+      type: nextflow
+      script: nf-core/fetchngs
+      revision: 1.12.0
+
+  inputs:
+    - id: input
+      description: IDs
+      type: textarea
+      value: "SRR12696236"
+      writeFile: "ids.csv"
+
+  outputs:
+    - id: outdir
+      description: Output
+      type: local-folder
