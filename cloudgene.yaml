@@ -9,7 +9,6 @@ logo: https://raw.githubusercontent.com/nf-core/fetchngs/master/docs/images/nf-c
 workflow:
   steps:
     - name: Fetch Data
-      type: nextflow
       script: nf-core/fetchngs
       revision: 1.12.0
 
